@@ -20,7 +20,7 @@ template<typename...Args> void print_(Args...args){((cout<<args<<" "),...)<<endl
 #define MAXN 1010
 
 set<pair<int, int>> T, E, U;
-int weights[MAXN][MAXN], toll[MAXN][MAXN];
+int weights[MAXN][MAXN];
 int n, m;
 struct node {
     int v, w;
@@ -52,7 +52,6 @@ int32_t main() {
         if (t) T.insert(make_pair(u, v));
         else U.insert(make_pair(u, v));
         weights[u][v] = weights[v][u] = w;
-        toll[u][v] = toll[v][u] = t;
     }
     // map (u, i) to u + i*n
     e.resize(3*n);
