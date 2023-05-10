@@ -90,7 +90,7 @@ int32_t main() {
 
     vector<int> dis(3*n, INTINF), vis(3*n, 0);
     dijkstra(0, dis, vis);
-    debug(dis)
+//    debug(dis)
     int ans = min({dis[n - 1], dis[2*n - 1], dis[3*n - 1]});
     cout << (ans==INTINF ? -1 : ans) << endl;
 
