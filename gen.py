@@ -4,7 +4,7 @@ import subprocess
 
 n = 100
 m = 140
-num = 10
+num = 10000
 p = 1
 graph = subprocess.check_output(['./graph_gen', str(n), str(m), str(num)]).decode()
 

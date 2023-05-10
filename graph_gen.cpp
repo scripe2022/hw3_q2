@@ -9,7 +9,7 @@ int main(int argc, char *argv[]) {
     int V = stoi(argv[1]);
     int E = stoi(argv[2]);
     int NUM = stoi(argv[3]);
-    auto g = Graph::random(V, E).connected(1).g();
+    auto g = Graph::random(V, E).connected(1).g().shuffle();
     g.setEdgeWeights(TArray<int>::random(g.m(), 1, NUM));
     cout << g << endl;
 }
